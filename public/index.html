@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Media Share</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Secure Media Share</h1>
+    <p>Upload image, video, or audio. We encrypt files and generate a share link.</p>
+
+    <form id="uploadForm">
+      <label for="mediaInput" class="file-label">Choose media file</label>
+      <input id="mediaInput" name="media" type="file" accept="image/*,video/*,audio/*" required />
+      <button type="submit">Upload & Create Link</button>
+    </form>
+
+    <section id="result" class="hidden">
+      <h2>Share Link</h2>
+      <input id="shareLink" readonly />
+      <button id="copyBtn" type="button">Copy Link</button>
+    </section>
+
+    <p id="status" class="status"></p>
+    <small>Note: Download UI is disabled, but technical users may still capture media via developer tools.</small>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
